@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import React, { ChangeEvent } from "react";
+import { ComponentA, ComponentB } from "./Test-Store";
 
 type IStatus = "DONE" | "IN-PROGRESS" | "CANCEL";
 
@@ -94,7 +95,7 @@ class App extends React.Component<IProps, IState> {
   render() {
     return (
       <div>
-        <input value={this.state.todoName} onChange={this.onChangeName} />
+        {/* <input value={this.state.todoName} onChange={this.onChangeName} />
         <button onClick={this.addTodo}>add new todo</button>
         {this.state.todo.map((todo, index) => (
           <div
@@ -105,7 +106,10 @@ class App extends React.Component<IProps, IState> {
           >
             {todo.name}: {todo.status}
           </div>
-        ))}
+        ))} */}
+
+        <ComponentA />
+        <ComponentB />
       </div>
     );
   }
